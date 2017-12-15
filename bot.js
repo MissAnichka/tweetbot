@@ -5,7 +5,7 @@ let Twitter = new twit(config)
 
 // Tweet
 let retweet = () => {
-    var params = {
+    let params = {
         q: '#javascript OR #nodejs OR #react OR #redux OR #express OR #sequelize OR #nerdstack OR #softwareengineering',
         result_type: 'recent',
         lang: 'en'
@@ -31,11 +31,11 @@ let retweet = () => {
 }
 
 retweet();
-setInterval(retweet, 3000000);
+setInterval(retweet, 5000000);
 
 // Favorite
 let favoriteTweet = () => {
-    var params = {
+    let params = {
         q: '#javascript OR #nodejs OR #react OR #redux OR #express OR #sequelize OR #nerdstack OR #softwareengineering',
         result_type: 'recent',
         lang: 'en'
@@ -57,7 +57,7 @@ let favoriteTweet = () => {
 }
 
 favoriteTweet();
-setInterval(favoriteTweet, 3600000);
+setInterval(favoriteTweet, 6600000);
 
 function ranDom(arr){
     let index = Math.floor(Math.random()*arr.length);
