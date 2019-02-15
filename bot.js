@@ -6,7 +6,7 @@ let Twitter = new twit(config)
 // Tweet
 let retweet = () => {
     let params = {
-        q: '#javascript OR #nodejs OR #react OR #redux OR #express OR #sequelize OR #nerdstack OR #softwareengineering',
+        q: '#javascript OR #nodejs OR #react OR #redux OR #express OR #sequelize OR #nerdstack OR #softwareengineering OR #programmer OR #coder OR #devlife OR #softwaredeveloper OR #python OR #machinelearning OR #deeplearning OR #pytorch OR #aws OR #deepracer OR #google',
         result_type: 'recent',
         lang: 'en'
     }
@@ -31,12 +31,12 @@ let retweet = () => {
 }
 
 retweet();
-setInterval(retweet, 5000000);
+setInterval(retweet, randomTime());
 
 // Favorite
 let favoriteTweet = () => {
     let params = {
-        q: '#javascript OR #nodejs OR #react OR #redux OR #express OR #sequelize OR #nerdstack OR #softwareengineering',
+        q: '#javascript OR #nodejs OR #react OR #redux OR #express OR #sequelize OR #nerdstack OR #softwareengineering OR #programmer OR #coder OR #devlife OR #softwaredeveloper OR #python OR #machinelearning OR #deeplearning OR #pytorch OR #aws OR #deepracer OR #google',
         result_type: 'recent',
         lang: 'en'
     }
@@ -57,9 +57,15 @@ let favoriteTweet = () => {
 }
 
 favoriteTweet();
-setInterval(favoriteTweet, 6600000);
+setInterval(favoriteTweet, randomTime());
 
 function ranDom(arr){
     let index = Math.floor(Math.random()*arr.length);
     return arr[index];
 };
+
+function randomTime() {
+    const time = Math.random() * 100000000;
+    console.log("Time: ", time);
+    return time;
+}
