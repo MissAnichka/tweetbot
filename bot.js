@@ -1,5 +1,5 @@
-const twit = require('twit');
-const config = require('./config.js');
+const twit = require("twit");
+const config = process.env.consumer_key ? process.env : require("./secrets/config.js");
 
 let Twitter = new twit(config)
 
